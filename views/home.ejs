@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My game</title>
+    <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+    <section>
+        <div class="game">
+            <div class="title">
+                <h1>Guess the Number</h1>
+                <h2>Between 0 and 20</h3>
+            </div>
+
+<h3><%=choicesLeft%> Choices left</h3>
+<%if(msg){ %>
+<p class="msg"><%=msg %></p>
+<%} %>
+<form class="data" method="post" action="/">
+    <% if(!isOver) {%> 
+    <input type="number" name="enteredNumber" >
+    <button class="btn">submit</button>
+    <% } else {%>
+    <a href="/" class="btn">restart</a>
+    <% } %>
+</form>
+
+
+        </div>
+    </section>
+</body>
+</html>
